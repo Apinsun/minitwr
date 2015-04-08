@@ -1,0 +1,58 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    |     
+    |     
+    title uTweet
+    |     
+    |     
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    |     
+    link(href='http://fonts.googleapis.com/css?family=Exo:300,900&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    |     
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    |     
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+    |     
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+  body
+    #index-header.simple-header
+      .logo-title
+        | uTweet
+      |             
+      .header-signup
+        a(href='/user', title:'uTweet - User') Sign Up
+    |     
+    .body-content
+      .body-content-left
+        h1 Welcome to uTweet!
+        |         uTweet is a student social network project. Join Us!
+      |         
+      |         
+      .body-content-right
+        h1 Sign In
+        |             Please, provide your user name and password in order to log in to your uTweet account.
+        |             
+        .sign-in-form-container
+          form.form-horizontal(action='#')
+            .form-group
+              label.col-sm-2.control-label(for='exampleInputName2') User
+              |                     
+              .col-sm-10
+                input#exampleInputName2.form-control(type='text', placeholder='Your user name')
+            |                     
+            .form-group
+              label.col-sm-2.control-label(for='inputPassword3') Password
+              |                     
+              .col-sm-10
+                input#inputPassword3.form-control(type='password', placeholder='Your password')
+            |                     
+            .form-group
+              .col-sm-offset-2.col-sm-10
+                button.btn.btn-default(type='submit') Sign In
+        |             If you are not registered, you can sign up by clicking here.
+        |             
+        p
+          | If you have any questions or suggestions, please, contact us on the following e-mail address: support@utweet.com
+

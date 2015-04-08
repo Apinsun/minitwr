@@ -1,0 +1,88 @@
+/* Styles for index page */
+
+body {
+    margin: 0px;
+    background-image: url(../images/body-backg.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Exo', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.simple-header {
+    width: auto;
+    height: 70px;
+    text-align: left;
+    padding-top: 10px;
+    margin: 0px;
+    background-color: cornflowerblue;
+}
+
+.logo-title {
+    font-family: 'Exo', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-right: 0;
+    width: 140px;
+    height: auto;
+    float:  left;
+}
+
+.header-signup {
+    font-family: 'Exo', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 14pt;
+    height: 35px;
+    width: 130px;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    float: right;
+    margin-right: 30px;
+}
+
+.body-content {
+    width: 80%;
+    height: 375px;
+    background-image: url(../images/body-content-backg.png);
+    background-repeat: repeat;
+    margin: 100px auto 0 auto;
+    padding: 10px 25px 25px 25px;
+    font-family: 'Exo', sans-serif;
+}
+
+.body-content-left {
+    width: 50%;
+    float: left;
+}
+
+.body-content-right {
+    width: 50%;
+    float: right;
+}
+
+.sign-in-form-container {
+    width: auto;
+    height: auto;
+    margin: 20px 0 20px 0;
+}

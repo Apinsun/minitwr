@@ -1,0 +1,26 @@
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml')
+head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    |     
+    |     
+    title uTweet - User
+    |     
+    |     
+    link(rel='stylesheet', href='/stylesheets/user.css')
+    |     
+    link(href='http://fonts.googleapis.com/css?family=Exo:300,900&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    |     
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    |     
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+    |     
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+  body
+    Tweet sender
+      form(action='/user', method='POST')
+        textarea(name="tweet", rows=3, columns=50)
+        input(type='submit', content='Sends')
+    ul
+      - each tweet in tweets
+        li= tweet
