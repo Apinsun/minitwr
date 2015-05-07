@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  div(class="container-fluid").menu
+    div(class="row-offset-2")
+      div(class="col-md-2")
+        img(src="../images/logo.png")
+      div(class="col-md-1", style="padding-top:17px")
+        a.btn.btn-default(href="profile", role="button")=user.username
+      div(class="col-md-2", style="padding-top:17px")
+        a.btn.btn-default(href="edit", role="button") Modifier profil
+      div(class="col-md-2 col-md-offset-2", style="padding-top:20px")
+      div(class="col-md-2 col-md-offset-1", style="padding-top:17px")
+        a.btn.btn-default(href="/signout", role="button") Déconnexion
+  div(class="container-fluid").profile
+    div(class="row").padprofile
+      div(class="col-md-12")
+        form(action="/profile", method="POST")
+          h4.
+            Message instantanée
+          textarea(class="form-control", rows="5", name="tweet")
+          p
+          input.btn.btn-default(type="submit", content="Envoyer")
+  div(class="container-fluid").profile
+    div(class="row").padprofile
+      div(class="col-md-12").tweeting
+        ul
+          - each tweet in tweets
+              blockquote
+                p=tweet
+                footer="Envoyé par " + user.username
+  div(class="container-fluid").footer-profile
+    div(class="row")
+      div(class="col-sm-12")
+        &copy; 2015 uMess team. Tous droits réservés.

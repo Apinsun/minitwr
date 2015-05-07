@@ -1,0 +1,3 @@
+module.exports = {
+	"url" : "mongodb://<dbuser>:<dbpassword>@ds034348.mongolab.com:34348/ustorage";
+}

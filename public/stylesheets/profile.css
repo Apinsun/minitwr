@@ -1,0 +1,99 @@
+.menu {
+	background-image: url(../images/bkg-bottom-panel.png);
+	background-repeat: repeat;
+}
+
+body {
+  background-image: url(../images/body-backg.jpg);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+a {
+  color: #00B7FF;
+  background-color: none;
+}
+
+.header {
+	background-color: #6699FF;
+}
+
+.menu {
+	background-image: url(../images/bkg-bottom-panel.png);
+	background-repeat: repeat;
+	font-family: "Exo", sans-serif;
+	font-size: 18px;
+	font-weight: 900;
+	color: #FFFFFF;
+}
+
+a.btn {
+	background: none;
+	color: #FFFFFF;
+	font-family: "Exo", sans-serif;
+}
+
+button.btn {
+	background: none;
+	color: #FFFFFF;
+	font-family: "Exo", sans-serif;
+}
+
+.profile {
+	width: 80%;
+	background-image: url(../images/bkg-bottom-panel.png);
+	color: #FFFFFF;
+	margin-top: 30px;
+	font-family: "Exo", sans-serif;
+	font-size: 18px;
+}
+
+.padprofile {
+	padding: 10px;
+}
+
+h1 {
+	font-weight: 900;
+}
+
+.img-center {
+	text-align: center;
+}
+
+.footer-profile {
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-image: url(../images/bkg-bottom-panel.png);
+	background-repeat: repeat;
+	bottom: 0px; 
+	position: absolute;
+	font-family: "Exo", sans-serif;
+	margin-top: 30px;
+	float: left;
+}
+
+.tweeting {
+	color: #FFFFFF;
+	font-family: "Exo", sans-serif;
+	font-size: 14px;
+}
+
+.un {
+	font-weight: 900;
+	margin: 0px;
+	padding: 0px;
+}
+
+.dpt {
+	font-weight: 300;
+	margin: 0px;
+	padding: 0px;
+}
