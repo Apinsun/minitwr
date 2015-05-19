@@ -32,29 +32,15 @@ a {
 	color: #FFFFFF;
 }
 
-a.btn {
-	background: none;
-	color: #FFFFFF;
+nav.navbar {
+	border-radius: 0px;
 	font-family: "Exo", sans-serif;
 }
 
-button.btn {
-	background: none;
-	color: #FFFFFF;
-	font-family: "Exo", sans-serif;
-}
 
-.profile {
-	width: 80%;
-	background-image: url(../images/bkg-bottom-panel.png);
-	color: #FFFFFF;
-	margin-top: 30px;
-	font-family: "Exo", sans-serif;
-	font-size: 18px;
-}
 
-.padprofile {
-	padding: 10px;
+.profile-im-text {
+	font-size: 14px;
 }
 
 h1 {
@@ -63,21 +49,6 @@ h1 {
 
 .img-center {
 	text-align: center;
-}
-
-.footer-profile {
-	padding: 15px;
-	width: 100%;
-	text-align: center;
-	font-size: 14px;
-	color: #FFFFFF;
-	background-image: url(../images/bkg-bottom-panel.png);
-	background-repeat: repeat;
-	bottom: 0px; 
-	position: absolute;
-	font-family: "Exo", sans-serif;
-	margin-top: 30px;
-	float: left;
 }
 
 .tweeting {
@@ -96,4 +67,8 @@ h1 {
 	font-weight: 300;
 	margin: 0px;
 	padding: 0px;
+}
+
+.black {
+	color: #000000;
 }

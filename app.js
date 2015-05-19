@@ -5,6 +5,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var moment = require('moment');
+var formidable = require('formidable');
+var fs = require('fs');
 
 var dbConfig = require("./db.js");
 var mongoose = require("mongoose");
@@ -37,7 +40,11 @@ initPassport(passport);
 
 
 var routes = require('./routes/index')(passport);
+var umess = require('./routes/umess')(passport);
+var user = require('./routes/user')(passport);
 app.use('/', routes);
+app.use('/', umess);
+app.use('/', user);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,89 @@
+extends layout
+
+block content
+  nav(class="navbar navbar-default")
+    div(class="container-fluid")
+      div(class="navbar-header")
+        a(class="navbar-brand", href="/")
+          img(alt="uMess", src="/images/icon.png", width="20px", height="20px")
+        div(class="navbar-brand").umess-brand.
+          uMess
+      div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
+        ul(class="nav navbar-nav")
+          li
+            a(href="/profile")="Fil d'actualités"
+          li
+            a(href="/")=user.firstName + ' ' + user.surname
+        ul(class="nav navbar-nav navbar-right")
+          li
+            a(href="/signout")='Déconnexion'
+  div(class="container-fluid").user-profile
+    div(class="row")
+      div(class="col-sm-3")
+        img(class="img-resnponsive img-circle", src="./account_pictures/#{name_picture}", width="200px", height="200px", hspace="10px", vspace="20px")
+      div(class="col-sm-9")
+        div(class="row").header-fullname
+          div(class="col-sm-12")=user.firstName + ' ' + user.surname
+        div(class="row").header-username
+          div(class="col-sm-12").header-label.
+            Informations sur mon compte:
+        div(class="row").header-username
+          div(class="col-sm-12")=user.username
+        div(class="row").header-mail
+          div(class="col-sm-12")=user.mail
+        div(class="row").header-additional
+          div(class="col-sm-12")=user.additional
+  div(class="container-fluid").profile
+    div(class="panel panel-default")
+      div(class="panel-heading").
+        Changer mon image de profil
+      div(class="panel-body")
+        p(class="italics").
+          Pour que votre image de profil s'affiche en bonne qualité sur votre page personnelle 
+          veillez à choisir une image dont les dimensions sont au moin 200x200 pixels.
+        form(class="form-horizontal", action="/upload", enctype="multipart/form-data", method="POST")
+          input(type="file", name="upload", multiple="multiple")
+          br
+          input(class="btn btn-default", type="submit", value="Charger")
+  div(class="container-fluid").profile-edit
+    div(class="panel panel-default")
+      div(class="panel-heading").
+        Modifier mes informations personnelles
+      div(class="panel-body")
+        form(class="form-horizontal", action="/user", method="POST")
+          div(class="form-group")
+            label(for="inputFirstName3", class="col-sm-3 control-label").
+              Prénom
+            div(class="col-sm-9")
+              input(type="text", name="SelectedFirstName", class="form-control", id="inputFirstName3", placeholder="#{user.firstName}")
+          div(class="form-group")
+            label(for="inputSurname3", class="col-sm-3 control-label").
+              Nom de famille
+            div(class="col-sm-9")
+              input(type="text", name="SelectedSurname", class="form-control", id="inputUSurname3", placeholder="#{user.surname}")
+          div(class="form-group")
+            label(for="inputUserName3", class="col-sm-3 control-label").
+              Nom d'utilisateur
+            div(class="col-sm-9")
+              input(type="text", name="SelectedUserName", class="form-control", id="inputUserName3", placeholder="#{user.username}")
+          div(class="form-group")
+            label(for="inputEmail3", class="col-sm-3 control-label").
+              Courriel
+            div(class="col-sm-9")
+              input(type="email", name="SelectedMail", class="form-control", id="inputEmail3", placeholder="#{user.mail}")
+          div(class="form-group")
+            label(for="inputAdditional3", class="col-sm-3 control-label").
+              Ma description
+            div(class="col-sm-9")
+              input(type="text", name="SelectedAdditional", class="form-control", id="inputAdditional3", placeholder="#{user.additional}")
+          div(class="form-group")
+            div(class="col-sm-offset-2 col-sm-10")
+              button(type="submit", class="btn btn-default").black Confirmer les changements
+        if error
+          if error == 1
+            div(class="alert alert-danger", role="alert")
+              p="Ce nom d'utilisateur est déjà utilisé par un autre utilisateur!"
+  div(class="container-fluid").footer
+    div(class="row")
+      div(class="col-sm-12").
+        Copyright &copy; 2015 uMess. Tous droits réservés.

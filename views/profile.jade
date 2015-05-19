@@ -1,35 +1,46 @@
 extends layout
 
 block content
-  div(class="container-fluid").menu
-    div(class="row-offset-2")
-      div(class="col-md-2")
-        img(src="../images/logo.png")
-      div(class="col-md-1", style="padding-top:17px")
-        a.btn.btn-default(href="profile", role="button")=user.username
-      div(class="col-md-2", style="padding-top:17px")
-        a.btn.btn-default(href="edit", role="button") Modifier profil
-      div(class="col-md-2 col-md-offset-2", style="padding-top:20px")
-      div(class="col-md-2 col-md-offset-1", style="padding-top:17px")
-        a.btn.btn-default(href="/signout", role="button") Déconnexion
+  nav(class="navbar navbar-default")
+    div(class="container-fluid")
+      div(class="navbar-header")
+        a(class="navbar-brand", href="/")
+          img(alt="uMess", src="/images/icon.png", width="20px", height="20px")
+        div(class="navbar-brand").umess-brand.
+          uMess
+      div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
+        ul(class="nav navbar-nav")
+          li
+            a(href="/profile")="Fil d'actualités"
+          li
+            a(href="/user")=user.firstName + ' ' + user.surname
+        ul(class="nav navbar-nav navbar-right")
+          li
+            a(href="/signout")='Déconnexion'
   div(class="container-fluid").profile
-    div(class="row").padprofile
-      div(class="col-md-12")
-        form(action="/profile", method="POST")
-          h4.
-            Message instantanée
-          textarea(class="form-control", rows="5", name="tweet")
+    div(class="panel panel-default")
+      div(class="panel-heading").
+        Quoi de neuf ?
+      div(class="panel-body")
+        form(action="/profile", method="POST", enctype="plain")
+          textarea(class="form-control", rows="5", name="Im")
           p
-          input.btn.btn-default(type="submit", content="Envoyer")
+          input.btn.btn-default(type="submit", value="Envoyer")
   div(class="container-fluid").profile
-    div(class="row").padprofile
-      div(class="col-md-12").tweeting
-        ul
-          - each tweet in tweets
-              blockquote
-                p=tweet
-                footer="Envoyé par " + user.username
-  div(class="container-fluid").footer-profile
+    -count= im.length
+    -var k=0
+    while k < count
+      div(class="panel panel-default")
+        div(class="panel-heading")=im[k].firstName + ' ' + im[k].surname
+        div(class="panel-body")
+          div(class="container-fluid")
+            div(class="row")
+              div(class="col-sm-1")
+                img(class="img-responsive img-rounded", src='./account_pictures/#{im[k].picture}', width="50px", height="50px")
+              div(class="col-sm-11")=im[k].imtext
+        div(class="panel-footer")='Envoyé le ' + im[k].date
+      -k=k+1
+  div(class="container-fluid").footer
     div(class="row")
-      div(class="col-sm-12")
-        &copy; 2015 uMess team. Tous droits réservés.
+      div(class="col-sm-12").
+        Copyright &copy; 2015 uMess. Tous droits réservés.
