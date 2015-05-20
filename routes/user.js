@@ -35,7 +35,6 @@ module.exports = function(passport){
   	var form = new formidable.IncomingForm();
   	form.uploadDir = "./public/account_pictures";
 
-		// delete the old picture
 		if(req.user.picture != "default.png")
 		{
 			fs.unlink("/public/account_pictures/" + req.user.picture, function(err) {
@@ -47,7 +46,7 @@ module.exports = function(passport){
             var new_picture = files.upload.path.substring(24);
   					user_model.update({username: req.user.username}, {$set: { picture: new_picture}}, { upsert: true }, function(){});
         });
-  	res.redirect('/user');
+  		res.redirect('/user');
   	});
 
  return router;
