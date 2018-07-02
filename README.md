@@ -1,4 +1,4 @@
-#uMess
+# uMess
 
 uMess is a little social netwrok developped within our university classes of Web programming at University of Strasbourg.
 
