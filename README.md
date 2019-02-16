@@ -24,7 +24,7 @@ uMess is a little social netwrok developped within our classes of Web programmin
 
 ## Authors
 
-[Marek Felsoci](mailto:marek.felsoci@etu.unistra.fr) and Arnaud Pinsun, students et the [University of Strasbourg](http://www.unistra.fr).
+[Marek Felsoci](mailto:marek.felsoci@etu.unistra.fr) and Arnaud Pinsun, students at the [University of Strasbourg](http://www.unistra.fr).
 
 ## License
 
