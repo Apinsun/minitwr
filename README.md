@@ -1,6 +1,6 @@
 # uMess
 
-uMess is a little social netwrok developped within our classes of Web programming at the University of Strasbourg.
+uMess is a little social netwrok developped using **node.js** within our classes of Web programming at the University of Strasbourg.
 
 ## Implemented functionalities
 
